@@ -180,3 +180,12 @@ else:
 
 		else:
 			st.write(f'<p style="font-size:40px; text-align: center; color:green;">SUCCESS keep, consistent!!! {task_score:.0%}</p>', unsafe_allow_html=True)
+
+	with open("data.db", "rb") as fp:
+		btn = st.download_button(
+			label="Download db file",
+			data=fp,
+			file_name="data.db",
+			mime="application/octet-stream"
+		)
+
